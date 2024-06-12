@@ -2,6 +2,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar'
 
 const AddComplaint = () => {
     const [data, changeData] = useState([
@@ -56,6 +57,7 @@ const AddComplaint = () => {
 
     return (
         <div>
+            <Navbar/>
             <h1 align="center"><u>Sign Up</u></h1>
             <div className="container">
                 <div className="card" >
@@ -87,6 +89,10 @@ const AddComplaint = () => {
                                     <div className="col col-12 col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                         <label htmlFor="" className="form-label">Place</label>
                                         <input type="text" className="form-control" name='place' value={data.place} onChange={inputHandler} />
+                                    </div>
+                                    <div className="col col-12 col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                        <label htmlFor="" className="form-label">District</label>
+                                        <input type="text" className="form-control" name='district' value={data.district} onChange={inputHandler} />
                                     </div>
                                     <div className="col col-12 col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                         <label htmlFor="" className="form-label">Email</label>

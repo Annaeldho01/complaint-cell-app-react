@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Navbar from './Navbar'
 
 const ViewAll = () => {
     const [data,changeData]=useState([
@@ -15,7 +16,7 @@ const ViewAll = () => {
     useEffect(()=>fetchData(),[])
   return (
     <div>
-        
+        <Navbar/>
         <h3 align="center">VIEW COMPLAINT</h3>
         <div className="container">
             <div className="row">

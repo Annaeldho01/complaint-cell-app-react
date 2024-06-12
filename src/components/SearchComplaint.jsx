@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import Navbar from './Navbar'
 
 const SearchComplaint = () => {
     const[data,setData]=useState(
@@ -51,7 +52,7 @@ axios.post("http://localhost:8080/delete",input).then(
 
   return (
     <div>
-        
+        <Navbar/>
         <div className="container">
         <h1 align="center">SEARCH COMPLAINT</h1>
             <div className="row">
